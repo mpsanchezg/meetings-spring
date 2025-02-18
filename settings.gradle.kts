@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "meetings"
 include("data")
+include("ktor-server")
