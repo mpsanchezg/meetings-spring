@@ -1,11 +1,12 @@
 package cl.sangut.projects
 
-fun main() {
-    val name = "Kotlin"
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
-    println("Hello, " + name + "!")
+@SpringBootApplication
+class WebFluxApplication
 
-    for (i in 1..5) {
-        println("i = $i")
-    }
+fun main(args: Array<String>) {
+    runApplication<WebFluxApplication>(*args)
 }
+

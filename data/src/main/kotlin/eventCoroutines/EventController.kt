@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class EventController(private val eventService: EventService) {
-
-    @GetMapping("/events1", produces = [MediaType.TEXT_EVENT_STREAM_VALUE])
+    @GetMapping("/events", produces = [MediaType.TEXT_EVENT_STREAM_VALUE])
     fun getEvents(): Flow<String> {
         return eventService.streamEvents()
     }
